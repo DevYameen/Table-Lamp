@@ -1,24 +1,32 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #080707;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure body takes the full window height */
+  background-color: #212121;
+  transition: background-image 0.5s ease;
 }
 
 .name {
-  position: center;
   text-align: center;
   color: white;
   font-weight: 900;
-
+  z-index: 10;
+  position: relative;
+  display: none; /* Hidden initially */
 }
 
 .container {
-  height: 500px;
-  width: 500px;
+  height: 100%; /* Ensure the container also takes full height */
+  width: 100%;
   position: absolute;
   transform: translate(-50%, -50%);
-  left: 50;
-  top: 50%
+  left: 50%;
+  top: 50%;
 }
 
 .lamp {
@@ -26,7 +34,7 @@
   width: 170px;
   border-bottom: 150px solid red;
   border-right: 30px solid transparent;
-  border-left: 30px solid transpareent;
+  border-left: 30px solid transparent;
   position: absolute;
   margin: auto;
   left: 0;
@@ -60,7 +68,7 @@
 }
 
 input[type="checkbox"] {
-  -webkkit-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
   background-color: #ffffff;
   height: 25px;
@@ -104,3 +112,5 @@ input[type="checkbox"]:checked:before {
   background: linear-gradient(rgba(240, 243, 245, 0.5),
       rgba(41, 135, 228, 0.1));
 }
+
+
